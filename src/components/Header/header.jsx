@@ -1,45 +1,46 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./header.scss";
 function Header() {
   return (
     <div className="header">
       <div className="header__logo">
-        <a href="#!" className="header__logo--text">
+        <Link to="/" className="header__logo--text">
           PhimFox
-        </a>
+        </Link>
       </div>
 
       <nav className="navbar">
         <ul className="navbar__list">
           <li className="navbar__li">
-            <a href="#!" className="navbar__link">
+            <Link to="/search" className="navbar__link">
               Tìm Kiếm
-            </a>
+            </Link>
           </li>
           <li className="navbar__li">
-            <a href="#!" className="navbar__link">
+            <Link to="/hot" className="navbar__link">
               Phim Hot
-            </a>
+            </Link>
           </li>
           <li className="navbar__li">
-            <a href="#!" className="navbar__link">
+            <Link to="/movie/phim-le" className="navbar__link">
               Phim Lẻ
-            </a>
+            </Link>
           </li>
           <li className="navbar__li">
-            <a href="#!" className="navbar__link">
+            <Link to="/tv/phim-bo" className="navbar__link">
               Phim Bộ
-            </a>
+            </Link>
           </li>
           <li className="navbar__li">
-            <a href="#!" className="navbar__link">
+            <Link to="/news" className="navbar__link">
               Phim Mới
-            </a>
+            </Link>
           </li>
           <li className="navbar__li">
-            <a href="#!" className="navbar__link">
+            <Link to="/faq" className="navbar__link">
               FAQ
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
