@@ -1,0 +1,49 @@
+.card__film {
+  width: 100%;
+  height: 300px;
+  background-color: white;
+}
+.card__info {
+  width: 100%;
+  margin-top: 5px;
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.image__card--film {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.film {
+  margin-top: 15px;
+}
+
+.film__name {
+  font-size: 1.6rem;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #dbdbdb;
+  font-family: "Roboto", sans-serif;
+  text-overflow: ellipsis;
+}
+
+.form_card {
+  margin-top: 25px;
+}
+
+.title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: rgb(177, 162, 30);
+  &::after {
+    margin-top: 10px;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.575);
+  }
+}
