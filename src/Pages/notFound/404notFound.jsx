@@ -1,7 +1,7 @@
-import React from "react";
-import "./notFound.scss";
+import React from 'react';
+import './notFound.scss';
 function notFound() {
-  return <>dasdasd</>;
+    return <>dasdasd</>;
 }
 
 export default notFound;

@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 
-function Movie() {
-    const [movie, setMovie] = useState([]);
+function TV() {
+    const [TV, setTV] = useState([]);
 
     useEffect(() => {
-        fetch('https://phimapi.com/v1/api/danh-sach/phim-le?limit=24')
+        fetch('https://phimapi.com/v1/api/danh-sach/phim-bo?limit=24')
             .then((res) => res.json())
-            .then((phimle) => {
-                setMovie(phimle.data.items);
+            .then((TV) => {
+                setTV(TV.data.items);
             })
             .catch((error) => console.error('Error fetching data:', error));
     }, []);
@@ -15,8 +15,8 @@ function Movie() {
     return (
         <div className="container">
             <div className="row">
-                <span className="title">PHIM LẺ ĐỀ CỬ</span>
-                {movie.map((data, index) => (
+                <span className="title">PHIM BỘ ĐỀ CỬ</span>
+                {TV.map((data, index) => (
                     <div key={index} className="col-lg-2 col-sm-4 col-6">
                         <div className="film">
                             <div className="card__film">
@@ -41,12 +41,9 @@ function Movie() {
                 ))}
             </div>
 
-           <div className="movie__page">
-            
-           </div>
-            
+            <div className="movie__page"></div>
         </div>
     );
 }
 
-export default Movie;
+export default TV;
