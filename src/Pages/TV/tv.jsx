@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
-
+import { useParams } from 'react-router-dom';
 function TV() {
     const [TV, setTV] = useState([]);
-
+    const [title, setTitle] = useState(TV && '');
+    const { tvId } = useParams();
     useEffect(() => {
-        fetch('https://phimapi.com/v1/api/danh-sach/phim-bo?limit=24')
+        fetch(`https://phimapi.com/v1/api/danh-sach/${tvId}?limit=24`)
             .then((res) => res.json())
             .then((TV) => {
                 setTV(TV.data.items);
+                setTitle(TV.data.titlePage);
             })
             .catch((error) => console.error('Error fetching data:', error));
     }, []);
@@ -15,12 +17,12 @@ function TV() {
     return (
         <div className="container">
             <div className="row">
-                <span className="title">PHIM BỘ ĐỀ CỬ</span>
+                <span className="title">{title}</span>
                 {TV.map((data, index) => (
                     <div key={index} className="col-lg-2 col-sm-4 col-6">
                         <div className="film">
                             <div className="card__film">
-                                <a href="#!">
+                                <a href={`/info/${data.slug}`}>
                                     <img
                                         className="image__card--film"
                                         src={`https://phimimg.com/${data.poster_url}`}
@@ -29,10 +31,10 @@ function TV() {
                                 </a>
                             </div>
                             <div className="card__info">
-                                <a className="film__name" href="#!">
+                                <a className="film__name" href={`/info/${data.slug}`}>
                                     {data.name}
                                 </a>
-                                <a className="film__name" href="#!">
+                                <a className="film__name" href={`/info/${data.slug}`}>
                                     {data.origin_name}
                                 </a>
                             </div>

@@ -48,7 +48,7 @@ function Content() {
                             <div key={index} className="col-lg-2 col-sm-4 col-6">
                                 <div className="film">
                                     <div className="card__film">
-                                        <a href="#!">
+                                        <a href={`/info/${data.slug}`}>
                                             <img
                                                 className="image__card--film"
                                                 src={`https://phimimg.com/${data.poster_url}`}
@@ -57,10 +57,10 @@ function Content() {
                                         </a>
                                     </div>
                                     <div className="card__info">
-                                        <a className="film__name" href="#!">
+                                        <a className="film__name" href={`/info/${data.slug}`}>
                                             {data.name}
                                         </a>
-                                        <a className="film__name" href="#!">
+                                        <a className="film__name" href={`/info/${data.slug}`}>
                                             {data.origin_name}
                                         </a>
                                     </div>
@@ -79,7 +79,7 @@ function Content() {
                             <div key={index} className="col-lg-2 col-sm-4 col-6">
                                 <div className="film">
                                     <div className="card__film">
-                                        <a href="#!">
+                                        <a href={`/info/${data.slug}`}>
                                             <img
                                                 className="image__card--film"
                                                 src={`https://phimimg.com/${data.poster_url}`}
@@ -88,10 +88,10 @@ function Content() {
                                         </a>
                                     </div>
                                     <div className="card__info">
-                                        <a className="film__name" href="#!">
+                                        <a className="film__name" href={`/info/${data.slug}`}>
                                             {data.name}
                                         </a>
-                                        <a className="film__name" href="#!">
+                                        <a className="film__name" href={`/info/${data.slug}`}>
                                             {data.origin_name}
                                         </a>
                                     </div>
@@ -110,7 +110,7 @@ function Content() {
                             <div key={index} className="col-lg-2 col-sm-4 col-6">
                                 <div className="film">
                                     <div className="card__film">
-                                        <a href="#!">
+                                        <a href={`/info/${data.slug}`}>
                                             <img
                                                 className="image__card--film"
                                                 src={`https://phimimg.com/${data.poster_url}`}
@@ -119,10 +119,10 @@ function Content() {
                                         </a>
                                     </div>
                                     <div className="card__info">
-                                        <a className="film__name" href="#!">
+                                        <a className="film__name" href={`/info/${data.slug}`}>
                                             {data.name}
                                         </a>
-                                        <a className="film__name" href="#!">
+                                        <a className="film__name" href={`/info/${data.slug}`}>
                                             {data.origin_name}
                                         </a>
                                     </div>
@@ -141,7 +141,7 @@ function Content() {
                             <div key={index} className="col-lg-2 col-sm-4 col-6">
                                 <div className="film">
                                     <div className="card__film">
-                                        <a href="#!">
+                                        <a href={`/info/${data.slug}`}>
                                             <img
                                                 className="image__card--film"
                                                 src={`https://phimimg.com/${data.poster_url}`}
@@ -150,10 +150,10 @@ function Content() {
                                         </a>
                                     </div>
                                     <div className="card__info">
-                                        <a className="film__name" href="#!">
+                                        <a className="film__name" href={`/info/${data.slug}`}>
                                             {data.name}
                                         </a>
-                                        <a className="film__name" href="#!">
+                                        <a className="film__name" href={`/info/${data.slug}`}>
                                             {data.origin_name}
                                         </a>
                                     </div>

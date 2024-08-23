@@ -1,0 +1,45 @@
+.banner {
+    position: relative;
+}
+.info__image {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+.info__card {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 200px;
+}
+
+.info__poster {
+    width: 100%;
+}
+
+.country_film {
+    margin-top: 10px;
+    color: white;
+}
+
+.time__film,
+.content_film {
+    background-color: rgba(0, 0, 0, 0.116);
+    margin-top: 10px;
+    color: white;
+    line-height: 24px;
+}
+.act_info {
+    display: flex;
+    align-items: center;
+    width: 450px;
+    margin-top: 15px;
+}
+.info__btn {
+    border-radius: 3px;
+    background-color: #dd013f;
+    color: white;
+    font-size: 1.6rem;
+    padding: 5px 54px;
+    font-size: 2rem;
+}

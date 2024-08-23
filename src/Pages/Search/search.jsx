@@ -18,8 +18,6 @@ function Search() {
         }
     }, [valueSearch]);
 
-    console.log(search);
-
     return (
         <div className="search">
             <div className="container">
@@ -41,7 +39,7 @@ function Search() {
                             <div key={index} className="col-lg-2 col-sm-4 col-6">
                                 <div className="film">
                                     <div className="card__film">
-                                        <a href={ds.url || '#!'}>
+                                        <a href={`/info/${ds.slug}`}>
                                             <img
                                                 className="image__card--film"
                                                 src={`https://phimimg.com/${ds.poster_url}`}
@@ -50,7 +48,7 @@ function Search() {
                                         </a>
                                     </div>
                                     <div className="card__info">
-                                        <a className="film__name" href={ds.url || '#!'}>
+                                        <a className="film__name" href={`/info/${ds.slug}`}>
                                             {ds.name || 'Tên phim'}
                                         </a>
                                     </div>
