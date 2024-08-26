@@ -1,64 +1,81 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400..700&display=swap');
 
 .header__logo--text {
-  font-size: 36px;
-  font-family:
-    Dancing Script,
-    Arial,
-    Gadget,
-    sans-serif;
-  background-image: -webkit-gradient(
-    linear,
-    right top,
-    left top,
-    color-stop(0, #adfbda),
-    color-stop(30%, #35c3ff),
-    color-stop(50%, #fda399),
-    color-stop(70%, #76d880),
-    color-stop(90%, #ebf38b),
-    to(#adfbda)
-  );
-  -webkit-animation: layout_animatedBackground_a__uXw48 20s linear infinite
-    alternate;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    font-size: 36px;
+    font-family:
+        Dancing Script,
+        Arial,
+        Gadget,
+        sans-serif;
+    background-image: -webkit-gradient(
+        linear,
+        right top,
+        left top,
+        color-stop(0, #adfbda),
+        color-stop(30%, #35c3ff),
+        color-stop(50%, #fda399),
+        color-stop(70%, #76d880),
+        color-stop(90%, #ebf38b),
+        to(#adfbda)
+    );
+    -webkit-animation: layout_animatedBackground_a__uXw48 20s linear infinite alternate;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+
 .header__author {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: auto;
-  width: 35px;
-  height: 35px;
-  background-color: white;
-  border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 50%;
 }
+
 .header__author--avatar {
-  font-family: "Roboto", sans-serif;
-  color: black;
+    font-family: 'Roboto', sans-serif;
+    color: black;
 }
+
 .header {
-  padding: 15px;
-  display: flex;
-  align-items: center;
+    padding: 15px;
+    display: flex;
+    align-items: center;
 }
 
 .navbar {
-  margin-left: 15px;
-  &__list {
+    margin-left: 15px;
+}
+
+.navbar__list {
     display: flex;
     align-items: center;
-  }
+}
 
-  &__li {
+.navbar__li {
     padding: 0 12px;
-  }
+}
 
-  &__link {
-    font-family: "Roboto", sans-serif;
+.navbar__link {
+    font-family: 'Roboto', sans-serif;
     color: white;
-  }
-  &__link:hover {
+}
+
+.navbar__link:hover {
     color: #fda399;
-  }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar__list {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar__list {
+        display: none;
+    }
 }

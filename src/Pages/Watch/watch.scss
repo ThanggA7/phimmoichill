@@ -1,12 +1,14 @@
+/* Base styles */
 .watch {
     margin-top: 20px;
 }
+
 .list {
     margin-top: 20px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px;
 }
 
 .list li a {
@@ -27,15 +29,9 @@
     align-items: center;
     justify-content: center;
     background-color: #22252a;
-
     &:focus {
         background-color: #1dc749;
     }
-}
-
-video {
-    width: 100%;
-    max-height: 570px;
 }
 
 .list__chap--title {
@@ -52,16 +48,20 @@ video {
 }
 
 .list__chap {
+    overflow: auto;
     width: 100%;
-    height: 100%;
+    height: 410px;
     padding: 10px 15px;
     background-color: #1a1c21;
+
+    scrollbar-width: none;
 }
 
 .film__title {
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-bottom: 20px;
 }
 
 .film__name,
@@ -94,4 +94,19 @@ video {
 
 .film_stream {
     padding-top: 35px;
+}
+
+video {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .list {
+        gap: 3px;
+    }
+}
+@media (max-width: 576px) {
+    .list {
+        gap: 3px;
+    }
 }

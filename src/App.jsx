@@ -11,7 +11,7 @@ function App() {
                 {routerPublic.map((data, index) => {
                     const Page = data.component;
                     return <Route key={index} path={data.path} element={<Page />} />;
-                })}
+                })} 
                 <Route path="*" element={<NFound />} />
             </Routes>
 

@@ -10,7 +10,7 @@ function Info() {
             .then((res) => res.json())
             .then((info_content) => {
                 setInfo(info_content.movie);
-                console.log(info_content.movie);
+                // console.log(info_content.movie);
             });
     }, [slug]);
 
@@ -36,6 +36,15 @@ function Info() {
                         <p className="country_film">Phim: {info.name} </p>
                         <p className="time__film">Thời gian: {info.time}</p>
                         <p className="content_film">Nội dung: {info.content} </p>
+
+                        <ul className="navbar_actor">
+                            Diễn viên:
+                            {info.actor.map((item, index) => (
+                                <li className="actor" key={index}>
+                                    - {item}
+                                </li>
+                            ))}
+                        </ul>
                     </div>
                 </div>
             )}

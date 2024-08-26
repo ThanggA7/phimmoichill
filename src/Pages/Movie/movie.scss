@@ -1,0 +1,37 @@
+.movie__page {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar__page {
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    &-link {
+        padding: 5px 10px;
+        border: 1px solid #dedede;
+        color: white;
+    }
+}
+
+.act_btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.next_page,
+.prev_page,
+.ellipsis {
+    padding: 5px 15px;
+    border: 1px solid #dedede;
+    color: white;
+}
+
+.navbar__page li:last-child {
+    padding: 5px 15px;
+    border: 1px solid #dedede;
+    color: white;
+}
