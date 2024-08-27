@@ -8,6 +8,7 @@ function News() {
             .then((res) => res.json())
             .then((News) => {
                 setNews(News.items);
+                document.title = 'Phim mới cập nhật !!';
             })
             .catch((error) => console.error('Error fetching data:', error));
     }, []);

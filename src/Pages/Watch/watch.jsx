@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import ReactHlsPlayer from 'react-hls-player';
+import Hls from 'hls.js';
 import './watch.scss';
 
 function Watch() {
@@ -16,20 +16,38 @@ function Watch() {
                 setChap(watch.movie);
                 setFilm(watch.episodes[0].server_data[0].link_m3u8);
                 setActiveFilm(watch.episodes[0].server_data);
+                document.title = watch.movie.name;
             });
     }, [slug]);
+
+    useEffect(() => {
+        const video = document.getElementById('my-hls-video');
+
+        if (Hls.isSupported()) {
+            const hls = new Hls();
+            hls.loadSource(`${film}`);
+            hls.attachMedia(video);
+            hls.on(Hls.Events.MANIFEST_PARSED, () => {
+                video.play();
+            });
+            return () => {
+                hls.destroy();
+            };
+        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+            video.src = `${film}`;
+            video.play();
+        }
+    }, [film]);
 
     return (
         <div className="watch">
             <div className="container">
                 <div className="film__title">
-                    <h1 className="film__name">{chap.name}</h1>
+                    <h1 className="film__name">{`${chap.name} ~ Tập ${active + 1}`}</h1>
                 </div>
                 <div className="row">
                     <div className="col-lg-9 col-12">
-                        <div className="video">
-                            <ReactHlsPlayer src={film} autoPlay={false} controls={true} width="100%" height="auto" />
-                        </div>
+                        <video id="my-hls-video" controls />
                     </div>
                     <div className="col-lg-3 col-12">
                         <div className="list__chap">

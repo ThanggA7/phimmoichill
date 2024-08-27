@@ -6,7 +6,7 @@ function Header() {
         <div className="header">
             <div className="header__logo">
                 <Link to="/" className="header__logo--text">
-                    PhimFox
+                    PhimChill
                 </Link>
             </div>
 

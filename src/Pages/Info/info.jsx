@@ -10,11 +10,9 @@ function Info() {
             .then((res) => res.json())
             .then((info_content) => {
                 setInfo(info_content.movie);
-                // console.log(info_content.movie);
+                document.title = info_content.movie.name;
             });
     }, [slug]);
-
-    // console.log(info.poster_url);
 
     return (
         <div className="container">

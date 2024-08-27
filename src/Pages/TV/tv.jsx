@@ -10,6 +10,8 @@ function TV() {
             .then((TV) => {
                 setTV(TV.data.items);
                 setTitle(TV.data.titlePage);
+
+                document.title = TV.data.seoOnPage.titleHead;
             })
             .catch((error) => console.error('Error fetching data:', error));
     }, []);

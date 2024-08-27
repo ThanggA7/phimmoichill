@@ -11,6 +11,7 @@ function Movie() {
             .then((phimle) => {
                 setMovie(phimle.data.items);
                 setTitle(phimle.data.titlePage);
+                document.title = phimle.data.seoOnPage.titleHead;
             })
             .catch((error) => console.error('Error fetching data:', error));
     }, []);

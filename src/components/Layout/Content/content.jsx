@@ -30,6 +30,9 @@ function Content() {
                     phimbo: phimboData.data.items,
                     tvshows: tvshowsData.data.items,
                 });
+
+                document.title =
+                    'Phim Chill chất lượng cao miễn phí. Xem phim hd VietSub. Phim thuyết minh chất lượng HD.';
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
