@@ -1,85 +1,174 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400..700&display=swap');
 
-.header__logo--text {
-    font-size: 36px;
-    font-family:
-        Dancing Script,
-        Arial,
-        Gadget,
-        sans-serif;
-    background-image: -webkit-gradient(
-        linear,
-        right top,
-        left top,
-        color-stop(0, #adfbda),
-        color-stop(30%, #35c3ff),
-        color-stop(50%, #fda399),
-        color-stop(70%, #76d880),
-        color-stop(90%, #ebf38b),
-        to(#adfbda)
-    );
-    -webkit-animation: layout_animatedBackground_a__uXw48 20s linear infinite alternate;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.header__author {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
-    width: 35px;
-    height: 35px;
-    background-color: white;
-    border-radius: 50%;
-}
-
-.header__author--avatar {
-    font-family: 'Roboto', sans-serif;
-    color: black;
-}
-
 .header {
     padding: 15px;
     display: flex;
     align-items: center;
     position: sticky;
-    top: -3px;
-    z-index: 1;
-    background-color: #06121db6;
+    top: 0;
+    z-index: 10;
+    background-color: #06121dc4;
+}
+
+.header__logo--text {
+    font-size: 2.8rem;
+    font-family: 'Dancing Script', Arial, sans-serif;
+    background-image: linear-gradient(to right, #adfbda, #35c3ff, #fda399, #76d880, #ebf38b);
+    background-clip: text;
+    color: transparent;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .navbar {
-    margin-left: 15px;
+    margin-left: auto;
 }
 
 .navbar__list {
     display: flex;
-    align-items: center;
+    gap: 20px;
 }
 
 .navbar__li {
-    padding: 0 12px;
+    list-style: none;
 }
 
 .navbar__link {
     font-family: 'Roboto', sans-serif;
-    color: white;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition:
+        background-color 0.3s,
+        color 0.3s;
 }
 
 .navbar__link:hover {
-    color: #fda399;
+    background-color: #fda399;
+    color: #0b2b4c;
+}
+
+.mobile-menu__toggle {
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.mobile-menu__toggle:hover {
+    transform: rotate(90deg);
 }
 
 @media screen and (max-width: 768px) {
+    .header__logo--text {
+        font-size: 2.4rem;
+    }
+
     .navbar__list {
         display: none;
+    }
+
+    .mobile-menu {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .navbar__list {
-        display: none;
+    .header__logo--text {
+        font-size: 2rem;
     }
+}
+
+/* Previous styles remain the same */
+
+.mobile-menu {
+    position: relative;
+    margin-left: auto;
+}
+
+.mobile-menu__toggle {
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.mobile-menu__toggle:hover {
+    transform: rotate(90deg);
+}
+
+.mobile-menu__dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    background-color: #0b2b4c;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition:
+        all 0.4s ease,
+        opacity 0.3s ease;
+    z-index: 10;
+}
+
+.mobile-menu__dropdown.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.mobile-menu__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.mobile-menu__li {
+    border-bottom: 1px solid #fda399;
+    transition: background-color 0.3s ease;
+}
+
+.mobile-menu__li:last-child {
+    border-bottom: none;
+}
+
+.mobile-menu__link {
+    display: block;
+    padding: 12px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.mobile-menu__link:hover {
+    background-color: #fda399;
+    color: #0b2b4c;
+    padding-left: 25px; /* Slight padding increase for a "slide" effect on hover */
 }
