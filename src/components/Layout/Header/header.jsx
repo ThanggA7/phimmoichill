@@ -46,7 +46,7 @@ function Header() {
             </nav>
 
             <div className="header__author">
-                <span className="header__author--avatar">QA</span>
+                <span className="header__author--avatar">NT</span>
             </div>
         </div>
     );
