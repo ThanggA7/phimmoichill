@@ -33,12 +33,11 @@
 }
 
 .navbar {
-    margin-left: auto;
+    margin-left: 20px;
 }
 
 .navbar__list {
     display: flex;
-    gap: 20px;
 }
 
 .navbar__li {
@@ -96,8 +95,6 @@
         font-size: 2rem;
     }
 }
-
-/* Previous styles remain the same */
 
 .mobile-menu {
     position: relative;
@@ -170,5 +167,5 @@
 .mobile-menu__link:hover {
     background-color: #fda399;
     color: #0b2b4c;
-    padding-left: 25px; /* Slight padding increase for a "slide" effect on hover */
+    padding-left: 25px;
 }

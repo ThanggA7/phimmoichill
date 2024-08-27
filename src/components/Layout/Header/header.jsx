@@ -11,7 +11,7 @@ function Header() {
             setIsMobile(true);
         } else {
             setIsMobile(false);
-            setMenuOpen(false); // Close menu if not on mobile
+            setMenuOpen(false);
         }
     };
 
