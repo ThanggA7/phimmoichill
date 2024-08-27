@@ -44,6 +44,10 @@
     padding: 15px;
     display: flex;
     align-items: center;
+    position: sticky;
+    top: -3px;
+    z-index: 1;
+    background-color: #06121db6;
 }
 
 .navbar {

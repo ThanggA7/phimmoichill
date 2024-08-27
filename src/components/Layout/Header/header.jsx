@@ -44,10 +44,6 @@ function Header() {
                     </li>
                 </ul>
             </nav>
-
-            <div className="header__author">
-                <span className="header__author--avatar">NT</span>
-            </div>
         </div>
     );
 }
