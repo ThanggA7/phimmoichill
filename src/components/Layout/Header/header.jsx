@@ -38,8 +38,8 @@ function Header() {
                         </Link>
                     </li>
                     <li className="navbar__li">
-                        <Link to="/faq" className="navbar__link">
-                            FAQ
+                        <Link to="/api" className="navbar__link">
+                            API
                         </Link>
                     </li>
                 </ul>

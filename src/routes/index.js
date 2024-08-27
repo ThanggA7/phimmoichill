@@ -1,4 +1,4 @@
-import Faq from '../Pages/Faq/faq';
+import Api from '../Pages/API/api';
 import Info from '../Pages/Info/info';
 import Movie from '../Pages/Movie/movie';
 import News from '../Pages/News/News';
@@ -14,7 +14,7 @@ const routerPublic = [
     { path: '/tv/:tvId', component: TV },
     { path: '/news', component: News },
     { path: '/search', component: Search },
-    { path: '/faq', component: Faq },
+    { path: '/api', component: Api },
     { path: '/info/:slug', component: Info },
     { path: '/watch/:slug', component: Watch },
 ];

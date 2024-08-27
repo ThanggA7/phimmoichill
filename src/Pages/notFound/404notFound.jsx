@@ -6,9 +6,7 @@ function notFound() {
     }
     return (
         <div className="container">
-            <h1 className="notFound">
-                Đơn giản không cầu kỳ , vui lòng trở lại trang chủ vì trang này không tồn tại :v
-            </h1>
+            <h1 className="notFound">vui lòng trở lại trang chủ vì trang này chưa làm hoặc không tồn tại</h1>
         </div>
     );
 }

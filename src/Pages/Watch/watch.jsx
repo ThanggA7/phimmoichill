@@ -16,6 +16,7 @@ function Watch() {
                 setChap(watch.movie);
                 setFilm(watch.episodes[0].server_data[0].link_m3u8);
                 setActiveFilm(watch.episodes[0].server_data);
+
                 document.title = watch.movie.name;
             });
     }, [slug]);
