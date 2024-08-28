@@ -33,6 +33,7 @@ function Info() {
                     <div className="content">
                         <p className="country_film">Phim: {info.name} </p>
                         <p className="time__film">Thời gian: {info.time}</p>
+                        {info_content = "acb"}
                         <p className="content_film">Nội dung: {info.content} </p>
 
                         <ul className="navbar_actor">

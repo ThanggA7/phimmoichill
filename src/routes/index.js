@@ -14,7 +14,6 @@ const routerPublic = [
     { path: '/tv/:tvId', component: TV },
     { path: '/news', component: News },
     { path: '/search', component: Search },
-    { path: '/api', component: Api },
     { path: '/info/:slug', component: Info },
     { path: '/watch/:slug', component: Watch },
 ];
