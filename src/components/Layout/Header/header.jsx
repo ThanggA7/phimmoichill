@@ -66,7 +66,7 @@ function Header() {
                         </li>
                         <li className="navbar__li">
                             <Link to="/api" className="navbar__link">
-                                API
+                                Noi nhiu qua, sao ma dau dau qua di
                             </Link>
                         </li>
                     </ul>
