@@ -13,7 +13,7 @@ function Info() {
                 document.title = info_content.movie.name;
             });
     }, [slug]);
-
+console.log(info)
     return (
         <div className="container">
             {info && (
